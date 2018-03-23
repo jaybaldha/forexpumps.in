@@ -6,7 +6,6 @@ import styled, { ThemeProvider } from "styled-components";
 import rightLogo from "./ForexLogo2.png";
 
 const StyledBody = styled.body`
-  padding: 15px;
   background-color: rgba(0, 0, 255, 0.3);
 `;
 const StyledLeftLogo = styled.img`
@@ -29,6 +28,26 @@ const StyledRightLogo = styled.img`
   margin-top: 2%;
   padding: 5px;
 `;
+const StyledNavUl = styled.ul`
+  list-style-type: none;
+  overflow: hidden;
+  background-color: #333;
+  width: 100%;
+`;
+const StyledNavLi = styled.li`
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  &:hover {
+    color: yellow;
+  }
+`;
+const Theme = {
+  main: "mediumseagreen"
+};
 
 class App extends Component {
   render() {
@@ -36,6 +55,13 @@ class App extends Component {
       <StyledBody>
         <StyledLeftLogo src={leftLogo} />
         <StyledRightLogo src={rightLogo} />
+        <StyledNavUl>
+          <StyledNavLi>Home</StyledNavLi>
+          <StyledNavLi>About Us</StyledNavLi>
+          <StyledNavLi>Products</StyledNavLi>
+          <StyledNavLi>Inquiry</StyledNavLi>
+          <StyledNavLi>Contact Us</StyledNavLi>
+        </StyledNavUl>
       </StyledBody>
     );
   }
